@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>حسابك | PARIS Gaming & Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Sans:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+  <script src="auth.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-red"></div><div class="ambient ambient-blue"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span><b>PAR<span>I</span>S</b><small>GAMING & CAFÉ</small></span></a>
+    <a class="back-link" href="index.html">العودة للموقع <span>↗</span></a>
+  </header>
+
+  <main class="auth-shell">
+    <section class="visual-panel">
+      <div class="visual-top"><span class="live"><i></i> THE PARIS EXPERIENCE</span><span>01 — ACCOUNT</span></div>
+      <div class="visual-center"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="monogram">P<span>.</span></div><p class="visual-kicker">PLAY. EAT. CHILL.</p><h1>YOUR NIGHT.<br><em>YOUR RULES.</em></h1><p class="visual-description">كل تجربة ليها بداية. ابدأها بحسابك وخلي تفاصيلك جاهزة في كل زيارة.</p></div>
+      <div class="visual-bottom"><span>BADR CITY · EGYPT</span><span>EST. PARIS</span></div>
+      <div class="visual-index">P / 26</div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-wrap">
+        <div class="mobile-brand">PAR<span>I</span>S <small>GAMING & CAFÉ</small></div>
+
+        <section class="auth-view active" id="loginView">
+          <div class="form-heading"><span class="eyebrow">WELCOME BACK</span><h2>نورت <em>PARIS.</em></h2><p>سجّل دخولك وكمل تجربتك من حيث انتهيت.</p></div>
+          <form id="loginForm" novalidate>
+            <label class="field"><span>البريد الإلكتروني أو اسم المستخدم</span><div class="input-wrap"><span class="field-icon">＠</span><input id="loginIdentity" autocomplete="username" placeholder="name@example.com" required></div><small class="field-error" id="loginIdentityError"></small></label>
+            <label class="field"><span>كلمة المرور</span><div class="input-wrap"><span class="field-icon">⌑</span><input id="loginPassword" type="password" autocomplete="current-password" placeholder="••••••••" required><button class="reveal-pass" type="button" data-toggle="loginPassword" aria-label="إظهار كلمة المرور">◉</button></div><small class="field-error" id="loginPasswordError"></small></label>
+            <div class="form-options"><label class="check"><input type="checkbox" id="rememberMe"><span></span>تذكرني على هذا الجهاز</label><button type="button" class="text-button" data-view="forgotView">نسيت كلمة المرور؟</button></div>
+            <button class="primary-button" type="submit"><span>تسجيل الدخول</span><b>↗</b></button>
+          </form>
+          <p class="switch-copy">لسه معندكش حساب؟ <button class="text-button" data-view="registerView">اعمل حساب جديد</button></p>
+        </section>
+
+        <section class="auth-view" id="registerView">
+          <div class="form-heading"><span class="eyebrow">JOIN THE EXPERIENCE</span><h2>حسابك، <em>بدايتك.</em></h2><p>أنشئ حسابك في خطوات بسيطة.</p></div>
+          <form id="registerForm" novalidate>
+            <div class="avatar-upload"><div class="avatar-preview" id="avatarPreview">P</div><div><b>صورتك الشخصية <small>اختياري · JPG / PNG / WEBP</small></b><label class="upload-button" for="profilePhoto">＋ ارفع صورة</label><input id="profilePhoto" type="file" accept="image/png,image/jpeg,image/webp" hidden><button class="remove-photo" id="removePhoto" type="button" hidden>إزالة الصورة</button></div></div>
+            <label class="field"><span>الاسم بالكامل</span><div class="input-wrap"><span class="field-icon">✳</span><input id="fullName" autocomplete="name" placeholder="اسمك بالكامل" maxlength="70" required></div><small class="field-error" id="fullNameError"></small></label>
+            <div class="two-fields">
+              <label class="field"><span>اسم المستخدم</span><div class="input-wrap"><span class="field-icon">＠</span><input id="username" autocomplete="username" placeholder="username" minlength="3" maxlength="24" required></div><small class="field-error" id="usernameError"></small></label>
+              <label class="field"><span>البريد الإلكتروني</span><div class="input-wrap"><span class="field-icon">✉</span><input id="registerEmail" type="email" autocomplete="email" placeholder="email@example.com" required></div><small class="field-error" id="registerEmailError"></small></label>
+            </div>
+            <div class="two-fields">
+              <label class="field"><span>كلمة المرور</span><div class="input-wrap"><span class="field-icon">⌑</span><input id="registerPassword" type="password" autocomplete="new-password" placeholder="8 أحرف على الأقل" required><button class="reveal-pass" type="button" data-toggle="registerPassword">◉</button></div><small class="field-error" id="registerPasswordError"></small></label>
+              <label class="field"><span>تأكيد كلمة المرور</span><div class="input-wrap"><span class="field-icon">⌑</span><input id="confirmPassword" type="password" autocomplete="new-password" placeholder="اكتبها مرة تانية" required></div><small class="field-error" id="confirmPasswordError"></small></label>
+            </div>
+            <div class="strength"><div class="strength-track"><i id="strengthBar"></i></div><small id="strengthText">قوة كلمة المرور</small></div>
+            <label class="check terms"><input type="checkbox" id="acceptTerms"><span></span>أوافق على <button type="button" class="text-button" id="termsInfo">شروط الاستخدام</button> وأفهم أن الحساب محفوظ على هذا المتصفح فقط.</label>
+            <small class="field-error" id="termsError"></small>
+            <button class="primary-button" type="submit"><span>إنشاء الحساب</span><b>↗</b></button>
+          </form>
+          <p class="switch-copy">عندك حساب بالفعل؟ <button class="text-button" data-view="loginView">سجّل دخولك</button></p>
+        </section>
+
+        <section class="auth-view" id="forgotView">
+          <div class="form-heading"><span class="eyebrow">ACCOUNT RECOVERY</span><h2>نرجعك <em>تاني.</em></h2><p>اكتب البريد المسجل، وبعد التحقق تقدر تعيّن كلمة مرور جديدة على نفس الجهاز.</p></div>
+          <form id="forgotForm" novalidate>
+            <label class="field"><span>البريد الإلكتروني</span><div class="input-wrap"><span class="field-icon">✉</span><input id="forgotEmail" type="email" autocomplete="email" placeholder="email@example.com" required></div><small class="field-error" id="forgotEmailError"></small></label>
+            <label class="field"><span>كلمة المرور الجديدة</span><div class="input-wrap"><span class="field-icon">⌑</span><input id="newPassword" type="password" autocomplete="new-password" placeholder="8 أحرف على الأقل" required></div><small class="field-error" id="newPasswordError"></small></label>
+            <button class="primary-button" type="submit"><span>تحديث كلمة المرور</span><b>↗</b></button>
+          </form>
+          <p class="local-warning">استعادة محلية فقط: لا يتم إرسال بريد إلكتروني أو كود تحقق.</p>
+          <p class="switch-copy"><button class="text-button" data-view="loginView">العودة لتسجيل الدخول</button></p>
+        </section>
+
+        <section class="auth-view" id="profileView">
+          <div class="form-heading"><span class="eyebrow">YOUR PARIS ID</span><h2>أهلاً <em id="profileGreeting">بيك.</em></h2><p>حسابك محفوظ على المتصفح ده.</p></div>
+          <div class="profile-card"><div class="profile-avatar" id="profileAvatar">P</div><div><h3 id="profileName">—</h3><p id="profileEmail">—</p><small id="profileUsername">—</small></div></div>
+          <div class="profile-meta"><div><span>تاريخ إنشاء الحساب</span><b id="profileCreated">—</b></div><div><span>نوع التخزين</span><b>Local browser storage</b></div></div>
+          <div class="data-actions"><button class="secondary-button" id="exportUsers">↓ تصدير users.json</button><label class="secondary-button import-button" for="importUsers">↑ استيراد JSON</label><input type="file" id="importUsers" accept="application/json,.json" hidden></div>
+          <p class="privacy-note">ملف التصدير يحتوي على بيانات الحساب وبصمات كلمات المرور المشفرة. احتفظ به في مكان خاص ولا تشاركه.</p>
+          <button class="logout-button" id="logoutButton">تسجيل الخروج <span>↗</span></button>
+          <a class="return-site" href="index.html">العودة إلى PARIS</a>
+        </section>
+
+        <div class="security-foot"><span>⌑ LOCAL DEMO AUTH</span><span>YOUR DATA STAYS IN THIS BROWSER</span></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="authToast" role="status" aria-live="polite"></div>
+</body>
+</html>
